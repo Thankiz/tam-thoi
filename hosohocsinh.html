@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Học Sinh</title>
+    <link rel="stylesheet" href="hosohocsinh.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="image/logo.webp" alt="DHHP Logo" width="50px">
+            <h2>Hồ Sơ Học Sinh</h2>
+            <p>Quản lý thông tin cá nhân học sinh</p>
+        </header>
+
+        <form class="profile-form" id="profileForm">
+            <!-- Các trường thông tin học sinh -->
+            <div class="form-group">
+                <label for="fullname">Họ Tên</label>
+                <input type="text" id="fullname" placeholder="Nhập họ và tên" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Tuổi</label>
+                <input type="number" id="age" placeholder="Nhập tuổi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="yearOfBirth">Năm Sinh</label>
+                <input type="number" id="yearOfBirth" placeholder="Nhập năm sinh" required>
+            </div>
+
+            <div class="form-group">
+                <label for="class">Lớp</label>
+                <input type="text" id="class" placeholder="Nhập lớp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="semester1">Điểm kỳ 1</label>
+                <input type="number" id="semester1" step="0.1" min="0" max="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="semester2">Điểm kỳ 2:</label>
+                <input type="number" id="semester2" step="0.1" min="0" max="10" required>
+            </div>
+
+            
+
+            <div class="form-group">
+                <label for="conduct">Hạnh kiểm</label>
+                <input type="text" id="conduct" placeholder="Nhập xếp loại hạnh kiểm" required>
+            </div>
+
+            <div class="form-group">
+                <label for="academicPerformance">Xếp Loại</label>
+                <input type="text" id="academicPerformance" placeholder="Nhập xếp loại học lực" required>
+            </div>
+
+            <div id="diemTrungBinh"></div>
+            
+            <div class="form-group">
+                <label for="note">Ghi Chú</label>
+                <textarea id="note" placeholder="xét lên lớp hoặc tốt nghiệp"></textarea>
+            </div>
+              
+        </form>
+
+         <!-- Nút Lưu Thông Tin -->
+         <button type="button" onclick="checkApproval()">Lưu Thông Tin</button>
+
+        <!-- Phần Kết Quả Phê Duyệt -->
+        <div id="approvalResult" class="approval-result"></div>
+
+        <footer>
+            <p>&copy; 2077 Hệ Thống Quản Lý .</p>
+        </footer>
+    </div>
+
+    <script src="hosohocsinh.js"></script>
+    
+</body>
+</html>
